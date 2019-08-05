@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.quickmas.salim.quickmasretail">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/favicon_app"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Module.Login.Login"
+            android:noHistory="true" />
+        <activity
+            android:name=".Module.Loading.Loading"
+            android:noHistory="true" />
+        <activity android:name=".Module.Dashboard.MainActivity" />
+        <activity android:name=".Module.DataSync.DataSync" />
+        <activity android:name=".Module.DataSync.DataDownload.PendingList" />
+        <activity android:name=".Module.DataSync.DataDownload.Dataloading" />
+        <activity
+            android:name=".Module.RTM.RTM.RTMSale.NewSale.SaleOutletSelection"
+            android:noHistory="true" />
+        <activity
+            android:name=".Module.RTM.RTM.RTMSale.NewSale.Sell_Quantity_Select"
+            android:noHistory="true" />
+        <activity
+            android:name=".Module.RTM.RTM.RTMSale.NewSale.Sell_Invoice_Company"
+            android:noHistory="true" />
+        <activity android:name=".Module.RTM.RTM.RTMSale.NewSale.Sell_Invoice_Type" />
+        <activity android:name=".Module.RTM.Stock.StockList" />
+        <activity android:name=".Module.RTM.RTM.RTMInvoiceList.InvoiceList" />
+        <activity android:name=".Module.RTM.RTM.RTMInvoiceList.PrintView.Memo_Print" />
+        <activity android:name=".Module.Summary.Product.Summary" />
+        <activity android:name=".Module.POS.PosSell.SelectProduct.PosSelectProduct" />
+        <activity android:name=".Module.POS.POSInvoiceList.POSInvoiceList" />
+        <activity
+            android:name=".Module.POS.POSInvoiceList.InvoicePayment"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Module.POS.PosInvoicePrint.PosInvoicePrint" />
+        <activity android:name=".Module.DataSync.DataDownload.DataUpload" />
+        <activity android:name=".Module.PosSelection.PosSelection" />
+        <activity android:name=".Module.POS.WarehouseStock.WarehouseStock" />
+        <activity android:name=".Module.POS.PosSummary.PosSummary" />
+        <activity android:name=".Module.PaymentReceived.CashPayment" />
+        <activity android:name=".Module.CashTransfer.CashTransfer" />
+        <activity android:name=".Module.Exchange.InvoiceList" />
+        <activity android:name=".Module.Exchange.ExchangeProductSelection" />
+        <activity android:name=".Module.StockTransfer.NewStockTransfer.NewStockTransfer" />
+        <activity android:name=".Module.StockTransfer.NewStockTransfer.CreateNewTransfer" />
+        <activity android:name=".Module.AddProductRetail.AddProduct.AddProduct" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.quickmas.salim.quickmasretail"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".Module.AddProductRetail.ProductList.ProductList" />
+        <activity android:name=".Module.AddProductRetail.PurchaseProduct.PurchaseProduct" />
+        <activity android:name=".Module.AddProductRetail.PurchaseProduct.PurchasePayment" />
+        <activity android:name=".Module.AddProductRetail.PaymentPaid.PaymentPaid" />
+        <activity
+            android:name=".Module.RTM.FreeProduct.FreeProductSale.FreeProductSelection"
+            android:noHistory="true" />
+        <activity android:name=".Module.RTM.FreeProduct.FreeProductSale.FreeProductCurrentInvoice" />
+        <activity android:name=".Module.RTM.FreeProduct.FreeProductSaleList.FreeProductSaleList" />
+        <activity
+            android:name=".Module.RTM.CRM.CRMSale.CRMSale"
+            android:noHistory="true" />
+        <activity android:name=".Module.RTM.CRM.CRMSale.CRMCurrentInvoice" />
+        <activity android:name=".Module.RTM.CRM.CRMList.CRMList" />
+        <activity android:name=".Module.RTM.CRM.CRMPrint.CRMPrint" />
+        <activity android:name=".Module.RTM.FreeProduct.FreeProductSaleList.FreeProductPrint" />
+        <activity
+            android:name=".Module.RTM.POSM.POSMSale.PosmProductSelect"
+            android:noHistory="true" />
+        <activity android:name=".Module.RTM.POSM.POSMSale.PosmCurrentInvoice" />
+        <activity android:name=".Module.RTM.POSM.POSMList.POSMList" />
+        <activity android:name=".Module.RTM.POSM.POSMPrint.POSMPrint" />
+        <activity
+            android:name=".Module.RTM.MI.MISale.MiSale"
+            android:noHistory="true" />
+        <activity android:name=".Module.RTM.MI.MISale.MiCurrentInvoice" />
+        <activity android:name=".Module.RTM.MI.MIList.MiList" />
+        <activity android:name=".Module.RTM.MI.MIPrint.MiPrint" />
+        <activity android:name=".Module.RTM.Assignment.AssignmentList" />
+        <activity android:name=".Module.Dashboard.FooterActivity.Settings.Settings" />
+        <activity android:name=".Module.DataSync.AssignmentList.AssignmentList" />
+        <activity android:name=".Module.StockTransfer.RecevieStcokTransfer.ReceiveStock" />
+        <activity android:name=".Module.StockTransfer.DeliverStockTransfer.DeliverStock" />
+        <activity android:name=".Module.CashStatment.CashStatmentShow" />
+        <activity android:name=".Module.RegularSale.RegularSaleInvoice.RegularInvoiceList" />
+        <activity android:name=".Module.RegularSale.RegularSaleInvoice.RegularInvoicePrint" />
+        <activity android:name=".Module.RegularSale.RegularSaleInvoice.RegularInvoicePayment" />
+        <activity android:name=".Module.RegularSale.RegularSaleCreate.RegularCreateInvoice"></activity>
+    </application>
+
+</manifest>
